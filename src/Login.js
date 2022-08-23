@@ -27,7 +27,7 @@ const Login = () => {
     });
 
     return (
-        <div><form onSubmit={formik.handleSubmit}>
+        <div><form >
 
         <label>email</label>
             <input type="emial" name="email" placeholder="email" id='email' label="email"
@@ -42,7 +42,7 @@ const Login = () => {
                 {formik.touched.password && formik.errors.password ? (<div>{formik.touched.password}</div> ): null}
 
 
-            <button type="submit" >Login</button>
+            <button type="submit" onSubmit={formik.handleSubmit}>Login</button>
 
         </form></div>
     )
